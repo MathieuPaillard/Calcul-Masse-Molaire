@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculMasseMolaireActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle_Masse_Molaire"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#4C9E05"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:gravity="top"
+        android:shadowColor="#A81515"
+        android:text="Calcul de Masse Molaire"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Masse_Molaire_Gauche"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_FORMULE_BRUTE"
+        app:layout_constraintVertical_weight="10" />
+
+
+    <TextView
+        android:id="@+id/textView_Masse_Molaire_Gauche"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="#182CAF"
+        android:gravity="right"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Masse_Molaire_Milieu"
+        app:layout_constraintHorizontal_weight="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle_Masse_Molaire"
+        app:layout_constraintVertical_weight="90" />
+
+    <TextView
+        android:id="@+id/textView_Masse_Molaire_Milieu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1025AA"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Masse_Molaire_Gauche"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Masse_Molaire_Droite"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/textView_Masse_Molaire_Gauche"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle_Masse_Molaire"
+        app:layout_constraintVertical_weight="90" />
+
+    <TextView
+        android:id="@+id/textView_Masse_Molaire_Droite"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="#192A97"
+        android:gravity="left"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Masse_Molaire_Gauche"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/textView_Masse_Molaire_Milieu"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle_Masse_Molaire"
+        app:layout_constraintVertical_weight="90" />
+
+    <EditText
+        android:id="@+id/editText_FORMULE_BRUTE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="4dp"
+        android:backgroundTint="@color/black"
+        android:backgroundTintMode="src_in"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTitle_Masse_Molaire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Exit_MASSE_MOLAIRE"
+        android:hint="Veuillez saisir une Formule Brute"
+
+        app:layout_constraintVertical_weight="6"
+        app:layout_constraintHorizontal_weight="10"
+        />
+
+    <Button
+        android:id="@+id/button_AJOUTER_A_LA_Liste"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#238C28"
+        android:text="Ajouter A LA Liste"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Exit_MASSE_MOLAIRE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_SUPPRIMER_LA_Liste"
+        app:layout_constraintTop_toTopOf="@+id/button_Exit_MASSE_MOLAIRE"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="2" />
+
+    <Button
+        android:id="@+id/button_SUPPRIMER_LA_Liste"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textColor="@color/black"
+        android:text="Supprimer la liste"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Exit_MASSE_MOLAIRE"
+        app:layout_constraintEnd_toStartOf="@+id/button_AJOUTER_A_LA_Liste"
+        app:layout_constraintStart_toEndOf="@+id/button_Exit_MASSE_MOLAIRE"
+        app:layout_constraintTop_toTopOf="@+id/button_Exit_MASSE_MOLAIRE"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintVertical_weight="2" />
+
+    <Button
+        android:id="@+id/button_Exit_MASSE_MOLAIRE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#3038D3"
+        android:text="Menu"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editText_FORMULE_BRUTE"
+        app:layout_constraintEnd_toStartOf="@+id/button_SUPPRIMER_LA_Liste"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="10"
+        app:layout_constraintHorizontal_weight="2"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
