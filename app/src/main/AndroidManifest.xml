@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculateurMasseMolaire"
         tools:targetApi="31">
+
+
         <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
+
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3660114368289468~9433358691"/>
 
 
