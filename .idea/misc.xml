@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/layout/activity_calcul_masse_molaire.xml" value="0.4796195652173913" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/drawable/ic_launcher_masse_molaire_background.xml" value="0.477" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/layout/activity_calcul_masse_molaire.xml" value="0.9" />
         <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.477" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher_masse_molaire.xml" value="0.477" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher_masse_molaire2.xml" value="0.417" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher_masse_molaire_round.xml" value="0.3165" />
+        <entry key="..\:/Calcul-Masse-Molaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.477" />
       </map>
     </option>
   </component>

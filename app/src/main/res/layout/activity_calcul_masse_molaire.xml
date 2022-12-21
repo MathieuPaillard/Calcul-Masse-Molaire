@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="#4C9E05"
-        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:drawableLeft="@drawable/molecules_eau_150"
         android:gravity="top"
         android:shadowColor="#A81515"
         android:text="Calcul de Masse Molaire"
