@@ -10,6 +10,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.helloweed.calculateurmassemolaire.model.MasseMolaire;
 
 public class CalculMasseMolaireActivity extends AppCompatActivity {
@@ -32,10 +38,53 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
     private static final String SHARED_INFO_MOLAIRE_LISTE_MASSES = "SHARED_INFO_MOLAIRE_LISTE_MASSES";
     private static final String SHARED_INFO_MOLAIRE_LISTE_UNITES = "SHARED_INFO_MOLAIRE_LISTE_UNITES";
 
+
+    private AdView  mAdView4;
+    private AdView  mAdView5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcul_masse_molaire);
+// PUB
+        MobileAds.initialize(this,new OnInitializationCompleteListener(){
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+        });
+
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        AdView adView = new AdView(this);
+
+        adView.setAdSize(AdSize.BANNER);
+
+
+        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+
+        mAdView4 = findViewById(R.id.adView4);
+        mAdView4.loadAd(adRequest);
+        mAdView5 = findViewById(R.id.adView5);
+        mAdView5.loadAd(adRequest);
+
+// PUB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         mTitleMasse = findViewById(R.id.textViewTitle_Masse_Molaire);
         Button mbutton_Menu = findViewById(R.id.button_Exit_MASSE_MOLAIRE);
         mButton_Add_To_List = findViewById(R.id.button_AJOUTER_A_LA_Liste);
