@@ -28,8 +28,8 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class MainActivity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
-    private AdView mAdView2;
-    private AdView mAdView3;
+   /* private AdView mAdView2;
+    private AdView mAdView3;*/
 
     private Button mButtonMasseMolaire;
     @Override
@@ -41,21 +41,22 @@ public class MainActivity extends AppCompatActivity {
             public void onInitializationComplete(InitializationStatus initializationStatus) {}
         });
 
-
+// PUB BANNER
         AdRequest adRequest = new AdRequest.Builder().build();
+
         AdView adView = new AdView(this);
-
         adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
 
 
-        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+
         mAdView = findViewById(R.id.adView);
         mAdView.loadAd(adRequest);
-        mAdView2 = findViewById(R.id.adView2);
+      /*  mAdView2 = findViewById(R.id.adView2);
         mAdView2.loadAd(adRequest);
         mAdView3 = findViewById(R.id.adView3);
-        mAdView3.loadAd(adRequest);
-
+        mAdView3.loadAd(adRequest);*/
+// PUB BANNER
 
 
         mButtonMasseMolaire = findViewById(R.id.button_MASSE_MOLAIRE);

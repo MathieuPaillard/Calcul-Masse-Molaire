@@ -40,7 +40,7 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
 
 
     private AdView  mAdView4;
-    private AdView  mAdView5;
+  //  private AdView  mAdView5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,32 +55,14 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
 
         AdRequest adRequest = new AdRequest.Builder().build();
         AdView adView = new AdView(this);
-
         adView.setAdSize(AdSize.BANNER);
-
-
-        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
-
+        adView.setAdUnitId("ca-app-pub-3660114368289468/1374156842");
         mAdView4 = findViewById(R.id.adView4);
         mAdView4.loadAd(adRequest);
-        mAdView5 = findViewById(R.id.adView5);
-        mAdView5.loadAd(adRequest);
+      /*  mAdView5 = findViewById(R.id.adView5);
+        mAdView5.loadAd(adRequest);*/
 
 // PUB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
