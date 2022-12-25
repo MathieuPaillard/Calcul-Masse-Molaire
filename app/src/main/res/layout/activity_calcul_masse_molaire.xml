@@ -36,14 +36,14 @@
         android:gravity="right"
         android:text=""
         android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textSize="12dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView_Masse_Molaire_Milieu"
-        app:layout_constraintHorizontal_weight="10"
+        app:layout_constraintHorizontal_weight="9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle_Masse_Molaire"
-        app:layout_constraintVertical_weight="90" />
+        app:layout_constraintVertical_weight="60" />
 
     <TextView
         android:id="@+id/textView_Masse_Molaire_Milieu"
@@ -53,13 +53,13 @@
         android:gravity="center_horizontal"
         android:text=""
         android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_Masse_Molaire_Gauche"
         app:layout_constraintEnd_toStartOf="@+id/textView_Masse_Molaire_Droite"
-        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintHorizontal_weight="6"
         app:layout_constraintStart_toEndOf="@+id/textView_Masse_Molaire_Gauche"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle_Masse_Molaire"
-        app:layout_constraintVertical_weight="90" />
+        app:layout_constraintVertical_weight="60" />
 
     <TextView
         android:id="@+id/textView_Masse_Molaire_Droite"
@@ -70,13 +70,13 @@
         android:gravity="left"
         android:text=""
         android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_Masse_Molaire_Gauche"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="3"
         app:layout_constraintStart_toEndOf="@+id/textView_Masse_Molaire_Milieu"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle_Masse_Molaire"
-        app:layout_constraintVertical_weight="90" />
+        app:layout_constraintVertical_weight="60" />
 
     <EditText
         android:id="@+id/editText_FORMULE_BRUTE"
