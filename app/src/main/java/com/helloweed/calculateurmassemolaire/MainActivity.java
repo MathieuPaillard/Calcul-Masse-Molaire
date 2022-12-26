@@ -7,10 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
@@ -28,6 +30,12 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class MainActivity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
+
+
+    //pub intercitielle debut
+
+    // pub intercitielle fin
+
    /* private AdView mAdView2;
     private AdView mAdView3;*/
 
@@ -40,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {}
         });
+
 
 // PUB BANNER
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -57,16 +66,26 @@ public class MainActivity extends AppCompatActivity {
         mAdView3 = findViewById(R.id.adView3);
         mAdView3.loadAd(adRequest);*/
 // PUB BANNER
+// PUB Intersitiel
+        // Create the "retry" button, which tries to show an interstitial between game plays.
 
 
         mButtonMasseMolaire = findViewById(R.id.button_MASSE_MOLAIRE);
         mButtonMasseMolaire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent molaireActivityIntent = new Intent(MainActivity.this, CalculMasseMolaireActivity.class);
                 startActivity(molaireActivityIntent);
             }
         });
 
+
     }
+// PUB Intersitiel
+
+
+
+
+
 }
