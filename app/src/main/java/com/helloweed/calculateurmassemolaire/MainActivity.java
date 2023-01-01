@@ -21,10 +21,13 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.AdapterStatus;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
+import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,12 +49,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         MobileAds.initialize(this,new OnInitializationCompleteListener(){
             @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+                Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
+                for (String adapterClass : statusMap.keySet()) {
+                    AdapterStatus status = statusMap.get(adapterClass);
+                    Log.d("MyApp", String.format(
+                            "Adapter name: %s, Description: %s, Latency: %d",
+                            adapterClass, status.getDescription(), status.getLatency()));
+                }
+                AdRequest adRequest = new AdRequest.Builder().build();
+
+                AdView adView = new AdView(MainActivity.this);
+                adView.setAdSize(AdSize.BANNER);
+                adView.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
+
+
+
+                mAdView = findViewById(R.id.adView);
+                mAdView.loadAd(adRequest);
+            }
         });
 
 
 // PUB BANNER
-        AdRequest adRequest = new AdRequest.Builder().build();
+       /* AdRequest adRequest = new AdRequest.Builder().build();
 
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
@@ -60,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdView = findViewById(R.id.adView);
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
       /*  mAdView2 = findViewById(R.id.adView2);
         mAdView2.loadAd(adRequest);
         mAdView3 = findViewById(R.id.adView3);
