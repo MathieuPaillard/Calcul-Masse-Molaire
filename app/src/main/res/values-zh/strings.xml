@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">摩尔质量计算器</string>
+    <string name="calcul_de_masse_molaire">摩尔质量计算</string>
+    <string name="veuillez_saisir_une_formule_brute">请输入原始配方</string>
+    <string name="ajouter_a_la_liste">添加到列表中</string>
+    <string name="supprimer_la_liste">删除列表</string>
+    <string name="menu">菜单</string>
+    <string name="calculateur_de_masse_molaire">摩尔质量计算器</string>
+    <string name="En_attente_de_saisie">等待输入</string>
+    <string name="Veuillez_saisir_une_formule_brute">请输入原始公式</string>
+    <string name="Erreur_de_saisie">输入错误。</string>
+    <string name="Entite">化学实体</string>
+    <string name="Masse_molaire">摩尔质量</string>
+    <string name="Unite">统一</string>
+    <string name="Est_de">的摩尔质量为</string>
+    <string name="g_par_mol">克/摩尔</string>
+    <string name="La_masse_molaire_de">" "</string>
+</resources>

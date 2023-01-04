@@ -80,14 +80,14 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
         mTitleMasse = findViewById(R.id.textViewTitle_Masse_Molaire);
         mMasseMolaire.initialisationTableau();
         mTitleMasse.setBackgroundColor(0xFF2841DF);
-        mTitleMasse.setText("En attente de saisie");
+        mTitleMasse.setText(R.string.En_attente_de_saisie);
         liste_des_molécules_avec_leurs_masses = getSharedPreferences(SHARED_INFO_MOLAIRE, MODE_PRIVATE).getString(SHARED_INFO_MOLAIRE_LISTE_ENTITES_AVEC_MASSES, "Aucune Info");
         liste_des_molécules = getSharedPreferences(SHARED_INFO_MOLAIRE, MODE_PRIVATE).getString(SHARED_INFO_MOLAIRE_LISTE_ENTITES, "");
         liste_des_masses = getSharedPreferences(SHARED_INFO_MOLAIRE, MODE_PRIVATE).getString(SHARED_INFO_MOLAIRE_LISTE_MASSES, "");
         liste_des_unités = getSharedPreferences(SHARED_INFO_MOLAIRE, MODE_PRIVATE).getString(SHARED_INFO_MOLAIRE_LISTE_UNITES, "");
-        mResultMasseMolaireGauche.setText("Entité                   \n" + liste_des_molécules);
-        mResultMasseMolaireMileu.setText("Masse molaire\n" + liste_des_masses);
-        mResultMasseMolaireDroite.setText("Unité\n" + liste_des_unités);
+        mResultMasseMolaireGauche.setText(getString(R.string.Entite) + "                   \n" + liste_des_molécules);
+        mResultMasseMolaireMileu.setText(getString(R.string.Masse_molaire)+"\n" + liste_des_masses);
+        mResultMasseMolaireDroite.setText(getString(R.string.Unite)+"\n" + liste_des_unités);
 
         mEditText_FORMULE_BRUTE.addTextChangedListener(new TextWatcher() {
             @Override
@@ -101,17 +101,17 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 mMasseMolaire.setReinitialisation();
-                mTitleMasse.setText("La masse molaire de " + mEditText_FORMULE_BRUTE.getText().toString() + " est de " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " g/mol");
-                mResultMasseMolaireGauche.setText("Entité                   " + mMasseMolaire.quelsAtomes(mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_molécules));
-                mResultMasseMolaireMileu.setText("Masse molaire" + mMasseMolaire.quelsMasses(mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_masses));
-                mResultMasseMolaireDroite.setText("Unité" + mMasseMolaire.quellesUnites(mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_unités));
+                mTitleMasse.setText(getString(R.string.La_masse_molaire_de) +" " + mEditText_FORMULE_BRUTE.getText().toString() + " " +getString(R.string.Est_de)+" " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " "+getString(R.string.g_par_mol));
+                mResultMasseMolaireGauche.setText(getString(R.string.Entite)+"                   " + mMasseMolaire.quelsAtomes(mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_molécules));
+                mResultMasseMolaireMileu.setText(getString(R.string.Masse_molaire) + mMasseMolaire.quelsMasses(mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_masses));
+                mResultMasseMolaireDroite.setText(getString(R.string.Unite) + mMasseMolaire.quellesUnites(mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_unités));
                 if (mEditText_FORMULE_BRUTE.getText().toString().equals("")) {
                     mTitleMasse.setBackgroundColor(0xFF1530DA);
-                    mTitleMasse.setText("En attente de saisie");
-                    mResultMasseMolaireGauche.setText("Entité                   \n" + liste_des_molécules);
-                    mResultMasseMolaireMileu.setText("Masse molaire\n" + liste_des_masses);
-                    mResultMasseMolaireDroite.setText("Unité\n" + liste_des_unités);
-                    mEditText_FORMULE_BRUTE.setHint("Veuillez saisir une formule brute");
+                    mTitleMasse.setText(getString(R.string.En_attente_de_saisie));
+                    mResultMasseMolaireGauche.setText(getString(R.string.Entite)+"                   \n" + liste_des_molécules);
+                    mResultMasseMolaireMileu.setText(getString(R.string.Masse_molaire)+"\n" + liste_des_masses);
+                    mResultMasseMolaireDroite.setText(getString(R.string.Unite)+"\n" + liste_des_unités);
+                    mEditText_FORMULE_BRUTE.setHint(R.string.Veuillez_saisir_une_formule_brute);
                 } else {
                     mTitleMasse.setBackgroundColor(0xFF4C9E05);
                 }
@@ -139,16 +139,16 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mTitleMasse.setHeight(0);
                 if (mEditText_FORMULE_BRUTE.getText().toString().equals("") || mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(),"")==0 ){
-                   Toast toast = Toast.makeText(CalculMasseMolaireActivity.this, "Erreur de saisie." , Toast.LENGTH_SHORT);
+                   Toast toast = Toast.makeText(CalculMasseMolaireActivity.this, R.string.Erreur_de_saisie , Toast.LENGTH_SHORT);
 
                    toast.show();
                 } else {
 
-                    liste_des_molécules_avec_leurs_masses = liste_des_molécules_avec_leurs_masses + mEditText_FORMULE_BRUTE.getText().toString() + " " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " g/mol" + "\n";
+                    liste_des_molécules_avec_leurs_masses = liste_des_molécules_avec_leurs_masses + mEditText_FORMULE_BRUTE.getText().toString() + " " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " "+getString(R.string.g_par_mol) + "\n";
                     liste_des_molécules =  mEditText_FORMULE_BRUTE.getText().toString() + "\n" + liste_des_molécules + "\n";
                     liste_des_masses =  mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + "\n" + liste_des_masses + "\n";
-                    liste_des_unités =  "g/mol" + "\n" + liste_des_unités + "\n";
-                    mTitleMasse.setText("La masse molaire de " + mEditText_FORMULE_BRUTE.getText().toString() + " est de " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " g/mol");
+                    liste_des_unités =  getString(R.string.g_par_mol) + "\n" + liste_des_unités + "\n";
+                    mTitleMasse.setText(getString(R.string.La_masse_molaire_de)+" " + mEditText_FORMULE_BRUTE.getText().toString() + " "+getString(R.string.Est_de)+" " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " "+ getString(R.string.g_par_mol));
                     mResultMasseMolaireGauche.setText(liste_des_molécules);
                     mResultMasseMolaireMileu.setText(liste_des_masses);
                     mResultMasseMolaireDroite.setText(liste_des_unités);
@@ -164,14 +164,14 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
                 liste_des_molécules = "";
                 liste_des_unités = "";
                 liste_des_masses = "";
-                mResultMasseMolaireGauche.setText("Entité                   " + mMasseMolaire.quelsAtomes(mEditText_FORMULE_BRUTE.getText().toString()));
-                mResultMasseMolaireMileu.setText("Masse molaire" + mMasseMolaire.quelsMasses(mEditText_FORMULE_BRUTE.getText().toString()));
-                mResultMasseMolaireDroite.setText("Unité" + mMasseMolaire.quellesUnites(mEditText_FORMULE_BRUTE.getText().toString()));
-                mTitleMasse.setText("La masse molaire de " + mEditText_FORMULE_BRUTE.getText().toString() + " est de " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " g/mol");
+                mResultMasseMolaireGauche.setText(getString(R.string.Entite) + "                   " + mMasseMolaire.quelsAtomes(mEditText_FORMULE_BRUTE.getText().toString()));
+                mResultMasseMolaireMileu.setText(getString(R.string.Masse_molaire) + mMasseMolaire.quelsMasses(mEditText_FORMULE_BRUTE.getText().toString()));
+                mResultMasseMolaireDroite.setText(getString(R.string.Unite) + mMasseMolaire.quellesUnites(mEditText_FORMULE_BRUTE.getText().toString()));
+                mTitleMasse.setText(getString(R.string.La_masse_molaire_de)+" " + mEditText_FORMULE_BRUTE.getText().toString() + " "+getString(R.string.Est_de)+" " + mMasseMolaire.calculMasseMolaire(mEditText_FORMULE_BRUTE.getText().toString(), "") + " " + getString(R.string.g_par_mol));
                 if (mEditText_FORMULE_BRUTE.getText().toString().equals("")) {
                     mTitleMasse.setBackgroundColor(0xFF2841DF);
-                    mTitleMasse.setText("En attente de saisie");
-                    mEditText_FORMULE_BRUTE.setHint("Veuillez saisir une formule brute");
+                    mTitleMasse.setText(getString(R.string.En_attente_de_saisie));
+                    mEditText_FORMULE_BRUTE.setHint(getString(R.string.Veuillez_saisir_une_formule_brute));
                 } else {
                     mTitleMasse.setBackgroundColor(0x5010FF15);
                 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Molar Mass Calculator</string>
+    <string name="calcul_de_masse_molaire">Molar Mass Calculation</string>
+    <string name="veuillez_saisir_une_formule_brute">Please enter a Raw Formula</string>
+    <string name="ajouter_a_la_liste">Add to list</string>
+    <string name="supprimer_la_liste">Delete list</string>
+    <string name="menu">Menu</string>
+    <string name="calculateur_de_masse_molaire">Molar Mass Calculator</string>
+    <string name="En_attente_de_saisie">Waiting for input</string>
+    <string name="Veuillez_saisir_une_formule_brute">Please enter a raw formula</string>
+    <string name="Erreur_de_saisie">Input error.</string>
+    <string name="Entite">Entity</string>
+    <string name="Masse_molaire">Molar mass</string>
+    <string name="Unite">Unit</string>
+    <string name="La_masse_molaire_de">The molar mass of</string>
+    <string name="Est_de">is</string>
+    <string name="g_par_mol">g/mol</string>
+</resources>

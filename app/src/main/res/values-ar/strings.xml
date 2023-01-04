@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حاسبة الكتلة المولية</string>
+    <string name="calcul_de_masse_molaire">حساب الكتلة المولية</string>
+    <string name="veuillez_saisir_une_formule_brute">الرجاء إدخال صيغة أولية</string>
+    <string name="ajouter_a_la_liste">أضف إلى القائمة</string>
+    <string name="supprimer_la_liste">قائمة الحذف</string>
+    <string name="menu">القائمة</string>
+    <string name="calculateur_de_masse_molaire">حاسبة الكتلة المولية</string>
+    <string name="En_attente_de_saisie">في انتظار الإدخال</string>
+    <string name="Veuillez_saisir_une_formule_brute">الرجاء إدخال صيغة أولية</string>
+    <string name="Erreur_de_saisie">خطأ في إدخال.</string>
+    <string name="Entite">كيان</string>
+    <string name="Masse_molaire">كتلة مولية</string>
+    <string name="Unite">وحدة</string>
+    <string name="La_masse_molaire_de">alkutlat almuliat li</string>
+    <string name="Est_de">hi</string>
+    <string name="g_par_mol">jam/mul</string>
+</resources>

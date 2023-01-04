@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Molmassenrechner</string>
+    <string name="calcul_de_masse_molaire">Berechnung der Molmasse</string>
+    <string name="veuillez_saisir_une_formule_brute">Bitte geben Sie eine Rohformel ein</string>
+    <string name="ajouter_a_la_liste">Zur Liste hinzufügen</string>
+    <string name="supprimer_la_liste">Liste löschen</string>
+    <string name="menu">Speisekarte</string>
+    <string name="calculateur_de_masse_molaire">Molmassenrechner</string>
+    <string name="En_attente_de_saisie">Warten auf Einlass</string>
+    <string name="Veuillez_saisir_une_formule_brute">Bitte geben Sie eine Rohformel ein</string>
+    <string name="Erreur_de_saisie">Eingabe Fehler.</string>
+    <string name="Entite">Entität</string>
+    <string name="Masse_molaire">Molmasse</string>
+    <string name="Unite">Einheit</string>
+    <string name="La_masse_molaire_de">Die Molmasse von</string>
+    <string name="Est_de">beträgt</string>
+    <string name="g_par_mol">g/mol</string>
+</resources>

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Calculateur Masse Molaire</string>
+    <string name="calcul_de_masse_molaire">Calcul de Masse Molaire</string>
+    <string name="veuillez_saisir_une_formule_brute">Veuillez saisir une Formule Brute</string>
+    <string name="ajouter_a_la_liste">Ajouter à la liste</string>
+    <string name="supprimer_la_liste">Supprimer la liste</string>
+    <string name="menu">Menu</string>
+    <string name="calculateur_de_masse_molaire">Calculateur de masse molaire</string>
+    <string name="En_attente_de_saisie">En attente de saisie</string>
+    <string name="Veuillez_saisir_une_formule_brute">Veuillez saisir une formule brute</string>
+    <string name="Erreur_de_saisie">Erreur de saisie.</string>
+    <string name="Entite">Entité</string>
+    <string name="Masse_molaire">Masse molaire</string>
+    <string name="Unite">Unité</string>
+    <string name="La_masse_molaire_de">La masse molaire de</string>
+    <string name="Est_de">est de</string>
+    <string name="g_par_mol">g/mol</string>
 </resources>

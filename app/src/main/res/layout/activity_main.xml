@@ -9,13 +9,12 @@
         android:id="@+id/button_MASSE_MOLAIRE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculateur de masse molaire"
+        android:text="@string/calculateur_de_masse_molaire"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintTop_toBottomOf="@+id/adView" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -24,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3660114368289468/6995230752"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></com.google.android.gms.ads.AdView>
@@ -56,16 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
     <!--  This is your template view -->
 
-    <com.google.android.gms.ads.nativead.NativeAdView
-        android:id="@+id/my_template"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
-        app:gnt_template_type="@layout/gnt_medium_template_view"
-        app:layout_constraintBottom_toTopOf="@+id/adView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_MASSE_MOLAIRE" />
 
     <TextView
         android:id="@+id/timer"

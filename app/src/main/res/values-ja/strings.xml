@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">モル質量電卓</string>
+    <string name="calcul_de_masse_molaire">モル質量計算</string>
+    <string name="veuillez_saisir_une_formule_brute">生のフォーミュラを入力してください</string>
+    <string name="ajouter_a_la_liste">リストに追加する</string>
+    <string name="supprimer_la_liste">リストを削除</string>
+    <string name="menu">メニュー</string>
+    <string name="calculateur_de_masse_molaire">モル質量電卓</string>
+    <string name="Est_de">のモル質量は</string>
+    <string name="g_par_mol">グラム/モル</string>
+    <string name="En_attente_de_saisie">エントリー待ち</string>
+    <string name="Veuillez_saisir_une_formule_brute">生の数式を入力してください</string>
+    <string name="Erreur_de_saisie">入力エラー。</string>
+    <string name="Entite">化学物質</string>
+    <string name="Masse_molaire">モル質量</string>
+    <string name="Unite">団結</string>
+    <string name="La_masse_molaire_de">" "</string>
+</resources>

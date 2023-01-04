@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -14,6 +16,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
@@ -37,6 +41,8 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
+    private AdView mAdView2;
+    private AdView mAdView3;
 
 
     //pub intercitielle debut
@@ -61,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                             "Adapter name: %s, Description: %s, Latency: %d",
                             adapterClass, status.getDescription(), status.getLatency()));
                 }
-                AdRequest adRequest = new AdRequest.Builder().build();
+              /*  AdRequest adRequest = new AdRequest.Builder().build();
 
                 AdView adView = new AdView(MainActivity.this);
                 adView.setAdSize(AdSize.BANNER);
@@ -71,13 +77,22 @@ public class MainActivity extends AppCompatActivity {
 
                 mAdView = findViewById(R.id.adView);
                 mAdView.loadAd(adRequest);
-
-
-                AdLoader adLoader = new AdLoader.Builder(MainActivity.this, "ca-app-pub-3940256099942544/2247696110")
+*/
+// native-------------------------------------------------------------------------------------------
+               /* AdLoader adLoader = new AdLoader.Builder(MainActivity.this, "ca-app-pub-3940256099942544/2247696110")
                         .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                             @Override
                             public void onNativeAdLoaded(NativeAd nativeAd) {
-                                // Show the ad.
+                                NativeTemplateStyle styles = new
+                                        NativeTemplateStyle.Builder().withMainBackgroundColor(new ColorDrawable()).build();
+                                TemplateView template = findViewById(R.id.my_template);
+                                template.setStyles(styles);
+                                template.setNativeAd(nativeAd);
+                                if (isDestroyed()) {
+                                    nativeAd.destroy();
+                                    return;
+                                }
+
                             }
                         })
                         .withAdListener(new AdListener() {
@@ -91,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
                                 // used here to specify individual options settings.
                                 .build())
                         .build();
-
-
+                adLoader.loadAd(new AdRequest.Builder().build());*/
+// native-------------------------------------------------------------------------------------------
 
 
 
@@ -111,20 +126,41 @@ public class MainActivity extends AppCompatActivity {
 
 
 // PUB BANNER
-       /* AdRequest adRequest = new AdRequest.Builder().build();
-
-        AdView adView = new AdView(this);
+        //Banner 1
+        AdRequest adRequest = new AdRequest.Builder().build();
+        AdView adView = new AdView(MainActivity.this);
         adView.setAdSize(AdSize.BANNER);
         adView.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
-
-
-
         mAdView = findViewById(R.id.adView);
-        mAdView.loadAd(adRequest);*/
-      /*  mAdView2 = findViewById(R.id.adView2);
-        mAdView2.loadAd(adRequest);
+        mAdView.loadAd(adRequest);
+
+
+        //Benner 2
+        AdRequest adRequest2 = new AdRequest.Builder().build();
+        AdView adView2 = new AdView(MainActivity.this);
+        adView2.setAdSize(AdSize.BANNER);
+        adView2.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
+        mAdView2 = findViewById(R.id.adView2);
+        mAdView2.loadAd(adRequest2);
+
+
+        //Banner 3
+        AdRequest adRequest3 = new AdRequest.Builder().build();
+        AdView adView3 = new AdView(MainActivity.this);
+        adView3.setAdSize(AdSize.BANNER);
+        adView3.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
         mAdView3 = findViewById(R.id.adView3);
-        mAdView3.loadAd(adRequest);*/
+        mAdView3.loadAd(adRequest3);
+
+
+
+
+
+
+
+
+
+
 // PUB BANNER
 // PUB Intersitiel
         // Create the "retry" button, which tries to show an interstitial between game plays.
