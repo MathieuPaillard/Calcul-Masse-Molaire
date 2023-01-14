@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
     private AdView mAdView2;
-    private AdView mAdView3;
+
 
 
     //pub intercitielle debut
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         AdView adView = new AdView(MainActivity.this);
         adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
+        adView.setAdUnitId("ca-app-pub-3660114368289468/7900167598");
         mAdView = findViewById(R.id.adView);
         mAdView.loadAd(adRequest);
 
@@ -139,18 +139,12 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest2 = new AdRequest.Builder().build();
         AdView adView2 = new AdView(MainActivity.this);
         adView2.setAdSize(AdSize.BANNER);
-        adView2.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
+        adView2.setAdUnitId("ca-app-pub-3660114368289468/2588131166");
         mAdView2 = findViewById(R.id.adView2);
         mAdView2.loadAd(adRequest2);
 
 
-        //Banner 3
-        AdRequest adRequest3 = new AdRequest.Builder().build();
-        AdView adView3 = new AdView(MainActivity.this);
-        adView3.setAdSize(AdSize.BANNER);
-        adView3.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
-        mAdView3 = findViewById(R.id.adView3);
-        mAdView3.loadAd(adRequest3);
+
 
 
 
