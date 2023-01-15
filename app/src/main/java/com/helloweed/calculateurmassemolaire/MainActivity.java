@@ -41,7 +41,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
-    private AdView mAdView2;
+    //private AdView mAdView2;
 
 
 
@@ -57,92 +57,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MobileAds.initialize(this,new OnInitializationCompleteListener(){
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
-                Map<String, AdapterStatus> statusMap = initializationStatus.getAdapterStatusMap();
-                for (String adapterClass : statusMap.keySet()) {
-                    AdapterStatus status = statusMap.get(adapterClass);
-                    Log.d("MyApp", String.format(
-                            "Adapter name: %s, Description: %s, Latency: %d",
-                            adapterClass, status.getDescription(), status.getLatency()));
-                }
-              /*  AdRequest adRequest = new AdRequest.Builder().build();
-
-                AdView adView = new AdView(MainActivity.this);
-                adView.setAdSize(AdSize.BANNER);
-                adView.setAdUnitId("ca-app-pub-3660114368289468/6995230752");
-
-
-
-                mAdView = findViewById(R.id.adView);
-                mAdView.loadAd(adRequest);
-*/
-// native-------------------------------------------------------------------------------------------
-               /* AdLoader adLoader = new AdLoader.Builder(MainActivity.this, "ca-app-pub-3940256099942544/2247696110")
-                        .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
-                            @Override
-                            public void onNativeAdLoaded(NativeAd nativeAd) {
-                                NativeTemplateStyle styles = new
-                                        NativeTemplateStyle.Builder().withMainBackgroundColor(new ColorDrawable()).build();
-                                TemplateView template = findViewById(R.id.my_template);
-                                template.setStyles(styles);
-                                template.setNativeAd(nativeAd);
-                                if (isDestroyed()) {
-                                    nativeAd.destroy();
-                                    return;
-                                }
-
-                            }
-                        })
-                        .withAdListener(new AdListener() {
-                            @Override
-                            public void onAdFailedToLoad(LoadAdError adError) {
-                                // Handle the failure by logging, altering the UI, and so on.
-                            }
-                        })
-                        .withNativeAdOptions(new NativeAdOptions.Builder()
-                                // Methods in the NativeAdOptions.Builder class can be
-                                // used here to specify individual options settings.
-                                .build())
-                        .build();
-                adLoader.loadAd(new AdRequest.Builder().build());*/
-// native-------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
         });
 
 
-// PUB BANNER
+
+
+        // PUB BANNER
         //Banner 1
         AdRequest adRequest = new AdRequest.Builder().build();
         AdView adView = new AdView(MainActivity.this);
-        adView.setAdSize(AdSize.BANNER);
+        adView.setAdSize(AdSize.LARGE_BANNER);
         adView.setAdUnitId("ca-app-pub-3660114368289468/7900167598");
         mAdView = findViewById(R.id.adView);
         mAdView.loadAd(adRequest);
 
 
-        //Benner 2
+/*        //Benner 2
         AdRequest adRequest2 = new AdRequest.Builder().build();
         AdView adView2 = new AdView(MainActivity.this);
         adView2.setAdSize(AdSize.BANNER);
         adView2.setAdUnitId("ca-app-pub-3660114368289468/2588131166");
         mAdView2 = findViewById(R.id.adView2);
         mAdView2.loadAd(adRequest2);
-
+*/
 
 
 
