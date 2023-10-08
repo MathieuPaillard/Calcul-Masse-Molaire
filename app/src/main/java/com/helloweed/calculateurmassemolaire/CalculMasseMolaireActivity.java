@@ -58,6 +58,9 @@ public class CalculMasseMolaireActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
+        //ca-app-pub-3940256099942544~3347511713 exemple
+        //ca-app-pub-3660114368289468/9013938715 real ID
+
         adView.setAdUnitId("ca-app-pub-3660114368289468/9013938715");
         mAdView4 = findViewById(R.id.adView4);
         mAdView4.loadAd(adRequest);
